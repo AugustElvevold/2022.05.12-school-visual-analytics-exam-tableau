@@ -1,0 +1,33 @@
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px;
+    align-items: start;
+}
+
+.dashboard-thumbnail {
+    background-color: #141414;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.dashboard-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

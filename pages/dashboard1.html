@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard 1</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-header">
+        <a href="../index.html" class="back-button"><</a>
+        <h1>Dashboard 1</h1>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Tableau Dashboard Embed Code -->
+        <div class='tableauPlaceholder' id='viz1701859138761' style='position: relative'><noscript><a href='#'><img
+                        alt='Dashboard 1 '
+                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard1_17018590215610&#47;Dashboard1&#47;1_rss.png'
+                        style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='Dashboard1_17018590215610&#47;Dashboard1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image'
+                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Dashboard1_17018590215610&#47;Dashboard1&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object></div>
+        <script
+            type='text/javascript'>                    var divElement = document.getElementById('viz1701859138761'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1900px'; vizElement.style.height = '1027px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1900px'; vizElement.style.height = '1027px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <script type='text/javascript'>
+        function checkWidthAndAlert() {
+            var tableauDiv = document.getElementsByClassName('tableauPlaceholder')[0];
+            var windowWidth = window.innerWidth;
+
+            // Check if the user has already seen the alert
+            var hasSeenAlert = localStorage.getItem('hasSeenZoomOutAlert');
+
+            if (tableauDiv.offsetWidth > windowWidth && !hasSeenAlert) {
+                // Show SweetAlert2 popup
+                Swal.fire({
+                    title: 'Need a Better View?',
+                    text: 'If the dashboard appears cut off, try zooming out for a full view. On Windows, press CTRL and - (minus). On Mac, press ⌘ and - (minus).',
+                    icon: 'info',
+                    confirmButtonText: 'Got it!',
+                    background: '#292929',
+                    color: '#fff',
+                    confirmButtonColor: '#3085d6',
+                });
+
+                // Set localStorage so the alert won't show again
+                localStorage.setItem('hasSeenZoomOutAlert', 'true');
+            }
+        }
+
+        window.onload = checkWidthAndAlert;
+        window.onresize = checkWidthAndAlert;
+    </script>
+</body>
+
+</html>
