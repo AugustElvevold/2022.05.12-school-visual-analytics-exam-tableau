@@ -40,34 +40,7 @@
         <script
             type='text/javascript'>                    var divElement = document.getElementById('viz1701859424125'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1900px'; vizElement.style.height = '1027px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1900px'; vizElement.style.height = '1027px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '2127px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     </div>
-    <script type='text/javascript'>
-        function checkWidthAndAlert() {
-            var tableauDiv = document.getElementsByClassName('tableauPlaceholder')[0];
-            var windowWidth = window.innerWidth;
-
-            // Check if the user has already seen the alert
-            var hasSeenAlert = localStorage.getItem('hasSeenZoomOutAlert');
-
-            if (tableauDiv.offsetWidth > windowWidth && !hasSeenAlert) {
-                // Show SweetAlert2 popup
-                Swal.fire({
-                    title: 'Need a Better View?',
-                    text: 'If the dashboard appears cut off, try zooming out for a full view. On Windows, press CTRL and - (minus). On Mac, press ⌘ and - (minus).',
-                    icon: 'info',
-                    confirmButtonText: 'Got it!',
-                    background: '#292929',
-                    color: '#fff',
-                    confirmButtonColor: '#3085d6',
-                });
-
-                // Set localStorage so the alert won't show again
-                localStorage.setItem('hasSeenZoomOutAlert', 'true');
-            }
-        }
-
-        window.onload = checkWidthAndAlert;
-        window.onresize = checkWidthAndAlert;
-    </script>
+    <script src="../js/alert.js"></script>
 </body>
 
 </html>
