@@ -1,4 +1,4 @@
-# 2022.05.12-school-visual-analytics-exam-tableau
+# Visual Analytics exam Tableau
 
 See project live here:
 https://augustelvevold.github.io/2022.05.12-school-visual-analytics-exam-tableau/
